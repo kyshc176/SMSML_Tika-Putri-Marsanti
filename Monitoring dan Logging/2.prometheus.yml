@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'host_exporter'
+    static_configs:
+      # Prometheus akan mencari exporter di komputer Anda menggunakan alamat khusus ini
+      - targets: ['host.docker.internal:8001']
